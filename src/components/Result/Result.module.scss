@@ -1,0 +1,22 @@
+.result {
+  width: 400px;
+  min-height: 350px;
+  max-width: 100%;
+  background-color: #fff;
+  color: #222;
+  border-radius: 8px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
+  border: 1px solid #a0a096;
+  padding: 12px;
+  box-sizing: border-box;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+
+  .resultItemDate {
+    font-weight: bold;
+    color: #7a5ae2;
+  }
+}

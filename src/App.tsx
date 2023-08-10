@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styles from "./App.module.scss";
+import CalendarComponent from "./components/Calendar/Calendar"
+import PersonList from "./components/Person/Person";
+import Result from "./components/Result/Result";
+import usePersonList from "./hooks/usePersonList";
+import useResult from "./hooks/useResult";
 
 function App() {
+  const { personList, selectedPerson, addPerson, removePerson, selectPerson, setPersonDates } = usePersonList();
+  const { results } = useResult(personList);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.app}>
+      <div className={styles.header}>hike calendar ⛺</div>
+      <div className={styles.content}>
+        {selectedPerson ? (<CalendarComponent selectedPerson={selectedPerson} setPersonDates={setPersonDates}/>) : null}
+        <PersonList
+            personList={personList}
+            addPerson={addPerson}
+            removePerson={removePerson}
+            selectPerson={selectPerson}
+          />
+        <Result results={results} />
+      </div>
     </div>
   );
 }

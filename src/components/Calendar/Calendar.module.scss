@@ -1,0 +1,36 @@
+.addButton {
+    outline: none;
+    background: #6f48eb;
+    color: white;
+    padding: 0px 20px;
+    border: none;
+    cursor: pointer;
+    height: 36px;
+    border-radius: 4px;
+    border: 1px solid #6f48eb; 
+    flex: 1;
+    
+    &:hover {
+      background: #7a5ae2;
+    }
+}
+
+.selectedDates {
+    width: 400px;
+    max-width: 100%;
+    background-color: #fff;
+    color: #222;
+    border-radius: 0px 0px 8px 8px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.125em;
+    border: 1px solid #a0a096;
+    border-top: transparent;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.selectedName {
+    font-weight: bold;
+    color: #7a5ae2;
+}
